@@ -1,0 +1,9 @@
+# 构建产物
+dist/
+
+# 由 pnpm 生成，不手动改格式
+pnpm-lock.yaml
+
+# Python
+.venv/
+__pycache__/
