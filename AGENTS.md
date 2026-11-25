@@ -25,6 +25,11 @@
 
 2026-11-24 查看：Node 20.19.6、pnpm 10.15.1、Python 3.11.2、MySQL 8.0.32，未安装 uv 和 Docker。
 
+## 设计规范
+
+- 新增或修改 Web 界面前读取 [Web 设计规范](design-system/web/MASTER.md)，新增或修改 App 界面前读取 [App 设计规范](design-system/app/MASTER.md)。
+- 对应端的 `design-system/<端>/pages/<页面名>.md` 存在时，应用其中明确写出的页面差异。其他条目沿用该端的主规范。跨端基础色值统一维护在 Web 规范的「跨端基础色」一节。
+
 ## 协作约定
 
 - 项目仍在梳理需求，技术设计由用户逐步确定。AI 现阶段只了解背景，不要提前做技术设计或搭建代码。
