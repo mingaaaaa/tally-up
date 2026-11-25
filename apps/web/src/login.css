@@ -1,0 +1,145 @@
+#root:has(> .login-shell) {
+  width: auto;
+  border-inline: 0;
+}
+
+.login-shell {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 24px 16px;
+  text-align: start;
+}
+
+.login-card {
+  inline-size: min(400px, 100%);
+  margin-block-start: auto;
+  padding: 26px 22px 22px;
+}
+
+.login-head {
+  display: grid;
+  justify-items: center;
+  gap: 7px;
+  margin-block-end: 18px;
+  text-align: center;
+}
+
+.login-head .demo-brand {
+  margin-block-end: 4px;
+}
+
+.login-title {
+  color: var(--demo-ink);
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 20px;
+  font-weight: 680;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+
+.login-subtitle {
+  color: var(--demo-muted);
+  font-size: 13px;
+}
+
+.login-form {
+  padding: 0;
+}
+
+.login-password {
+  position: relative;
+}
+
+.login-password input {
+  padding-inline-end: 42px;
+}
+
+.login-password-toggle {
+  position: absolute;
+  inset-block: 2px;
+  inset-inline-end: 3px;
+}
+
+.login-captcha-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 112px;
+  gap: 8px;
+}
+
+.login-captcha-image {
+  display: grid;
+  place-items: center;
+  min-block-size: 41px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--demo-border);
+  border-radius: 6px;
+  background: var(--demo-surface);
+  color: var(--demo-muted);
+  font-size: 12px;
+  cursor: pointer;
+  transition: border-color 140ms;
+}
+
+.login-captcha-image:hover {
+  border-color: #c9bcae;
+}
+
+.login-captcha-image[aria-disabled='true'] {
+  cursor: progress;
+}
+
+.login-captcha-image img {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.login-hint {
+  margin-block-start: 4px;
+  color: var(--demo-muted);
+  font-size: 12px;
+}
+
+.login-submit {
+  inline-size: 100%;
+  min-block-size: 40px;
+  margin-block-start: 4px;
+}
+
+.login-submit:disabled {
+  opacity: 0.72;
+  pointer-events: none;
+}
+
+.login-note {
+  margin-block-end: auto;
+  color: var(--demo-muted);
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 485px) {
+  .login-card {
+    padding: 22px 18px 18px;
+  }
+}
+
+@media (pointer: coarse) {
+  .login-captcha-image {
+    min-block-size: 44px;
+  }
+
+  .login-password-toggle {
+    inset-block: 3px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .login-card {
+    animation: demo-panel-enter 300ms cubic-bezier(0.2, 0.7, 0.25, 1) both;
+  }
+}
