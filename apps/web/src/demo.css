@@ -1,4 +1,4 @@
-:root {
+:root:has(.demo-shell) {
   --demo-background: #ede9e3;
   color-scheme: light;
   font-family: Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;

@@ -1,10 +1,12 @@
 import { useState } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router'
 import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
+import Login from './Login.tsx'
 import './App.css'
 
-function App() {
+function Home() {
   const [count, setCount] = useState(0)
 
   return (
@@ -119,4 +121,14 @@ function App() {
   )
 }
 
-export default App
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="*" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
+  )
+}
